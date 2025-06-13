@@ -41,8 +41,15 @@ namespace ClassExample
             }
         }
 
+        public static int number = 10;
+
         static void Main(string[] args)
         {
+            // 섀도잉
+            int number = 20;
+            Console.WriteLine(number); // 클래스 변수 이름이 가려짐 (shadowing)
+            Console.WriteLine(Program.number); //호출하고 싶으면 클래스 변수명으로 사용
+
             Child childA = new Child("abc");
             Child childB = new Child(3L);
             // int < long < float < double
