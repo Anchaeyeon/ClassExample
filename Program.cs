@@ -93,6 +93,17 @@ namespace ClassExample
             // 메서드 오버라이딩
             child3.MethodO(); // 자식의 메서드 출력
             ((Parent)child3).MethodO(); // 부모의 메서드 출력
+
+            // 메서드 하이딩, 오버라이딩 비교 구현
+            List<Animal> Animals = new List<Animal>()
+            {
+                new Dog(), new Cat(), new Cat(), new Dog(),
+                new Dog(), new Cat(), new Dog(), new Dog()
+            };
+            foreach( var item in Animals)
+            {
+                item.Eat();
+            }
         }
     }
 }
